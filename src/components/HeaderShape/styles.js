@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 180,
+    marginBottom: 130,
   },
   circle1: {
     width: 200,

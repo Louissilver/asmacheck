@@ -1,28 +1,22 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import {Title} from '../../components/Title';
-import {Button} from '../../components/Button';
-import {Paragraph} from '../../components/Paragraph';
-import SplashscreenImage from '../../assets/undraw_medicine_b-1-ol.svg';
+import HomeEmptyChartImage from '../../assets/undraw_empty_re_opql.svg';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
+import {AppBar} from '../../components/AppBar';
 
-const Splashscreen = () => {
+const Home = ({navigation}) => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
         <HeaderShape />
         <View style={styles.content}>
-          <SplashscreenImage width={352} height={250} />
-          <Title>Monitore seu PFE com este aplicativo</Title>
-          <Paragraph>
-            Lörem ipsum pseudos reavis om diaheten tetranade. Repel polypol, il
-            dedeheten i ryde. Far kropolig till egode kägt. Nösk lasengar lalång
-            är elgasbil det exodynat.{' '}
-          </Paragraph>
-          <Button>Iniciar</Button>
+          <Title>Início</Title>
+          <HomeEmptyChartImage width={352} height={250} />
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };
@@ -30,6 +24,7 @@ const Splashscreen = () => {
 const styles = StyleSheet.create({
   background: {
     backgroundColor: theme.background,
+    height: '100%',
   },
   scroll: {
     width: '100%',
@@ -44,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Splashscreen;
+export default Home;

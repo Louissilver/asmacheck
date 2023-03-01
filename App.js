@@ -1,8 +1,8 @@
 import React from 'react';
-import Splashscreen from './src/screens/SplashScreen';
+import Routes from './src/routes';
 
 const App = () => {
-  return <Splashscreen />;
+  return <Routes />;
 };
 
 export default App;
