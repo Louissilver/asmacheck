@@ -5,8 +5,9 @@ import {Button} from '../../components/Button';
 import {Paragraph} from '../../components/Paragraph';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
+import {AppBar} from '../../components/AppBar';
 
-const ResultExport = () => {
+const ResultExport = ({navigation}) => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
@@ -22,6 +23,7 @@ const ResultExport = () => {
           <Button secondary>Cancelar</Button>
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };

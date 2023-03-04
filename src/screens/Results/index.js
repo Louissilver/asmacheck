@@ -6,8 +6,9 @@ import {Paragraph} from '../../components/Paragraph';
 import ResultsEmptyChartImage from '../../assets/undraw_empty_re_opql.svg';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
+import {AppBar} from '../../components/AppBar';
 
-const Results = () => {
+const Results = navigation => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
@@ -24,6 +25,7 @@ const Results = () => {
           <Button secondary>Exportar lista</Button>
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };

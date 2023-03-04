@@ -30,6 +30,7 @@ const Login = () => {
 const styles = StyleSheet.create({
   background: {
     backgroundColor: theme.background,
+    height: '100%',
   },
   scroll: {
     width: '100%',

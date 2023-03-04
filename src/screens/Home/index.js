@@ -5,11 +5,13 @@ import HomeEmptyChartImage from '../../assets/undraw_empty_re_opql.svg';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
 import {AppBar} from '../../components/AppBar';
+import Header from '../../components/Header';
 
 const Home = ({navigation}) => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
+        <Header isHome title={'Início'} />
         <HeaderShape />
         <View style={styles.content}>
           <Title>Início</Title>

@@ -4,8 +4,9 @@ import {Title} from '../../components/Title';
 import {Paragraph} from '../../components/Paragraph';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
+import {AppBar} from '../../components/AppBar';
 
-const HealthMap = () => {
+const HealthMap = navigation => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
@@ -19,6 +20,7 @@ const HealthMap = () => {
           </Paragraph>
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };

@@ -6,8 +6,9 @@ import {Paragraph} from '../../components/Paragraph';
 import NewAlarmImage from '../../assets/undraw_time_management_re_tk5w.svg';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
+import {AppBar} from '../../components/AppBar';
 
-const NewAlarm = () => {
+const NewAlarm = ({navigation}) => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
@@ -24,6 +25,7 @@ const NewAlarm = () => {
           <Button secondary>Cancelar</Button>
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };

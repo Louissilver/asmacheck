@@ -9,8 +9,9 @@ import AppHowToTestImage from '../../assets/undraw_scientist_3ow3.svg';
 import AppCallADoctorImage from '../../assets/undraw_doctor_kw-5-l.svg';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
+import {AppBar} from '../../components/AppBar';
 
-const About = () => {
+const About = ({navigation}) => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
@@ -54,6 +55,7 @@ const About = () => {
           </Paragraph>
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };

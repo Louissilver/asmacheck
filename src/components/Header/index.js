@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
 import {theme} from '../../styles/globalStyles';
 
-const Header = ({title}) => {
+const Header = ({title, isHome = false}) => {
   const navigation = useNavigation();
 
   const handleLogout = () => {
@@ -14,9 +14,12 @@ const Header = ({title}) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Icon name="arrow-left" size={35} color={theme.secondary} />
-      </TouchableOpacity>
+      {!isHome && (
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Icon name="arrow-left" size={35} color={theme.secondary} />
+        </TouchableOpacity>
+      )}
+      {isHome && <View style={{width: 35}} />}
       <Text style={styles.title}>{title}</Text>
       <TouchableOpacity onPress={handleLogout}>
         <Icon name="sign-out" size={35} color={theme.secondary} />

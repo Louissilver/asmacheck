@@ -5,11 +5,14 @@ import {Button} from '../../components/Button';
 import {Paragraph} from '../../components/Paragraph';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
+import Header from '../../components/Header';
+import {AppBar} from '../../components/AppBar';
 
-const PeakFlowMeter = () => {
+const PeakFlowMeter = ({navigation}) => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
+        <Header title={'Teste de PFE'} />
         <HeaderShape />
         <View style={styles.content}>
           <Title>Medidor de Pico de Fluxo</Title>
@@ -21,6 +24,7 @@ const PeakFlowMeter = () => {
           <Button>Gerar resultado</Button>
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };
@@ -28,6 +32,7 @@ const PeakFlowMeter = () => {
 const styles = StyleSheet.create({
   background: {
     backgroundColor: theme.background,
+    height: '100%',
   },
   scroll: {
     width: '100%',

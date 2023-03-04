@@ -4,8 +4,9 @@ import {Title} from '../../components/Title';
 import {Button} from '../../components/Button';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
+import {AppBar} from '../../components/AppBar';
 
-const AlarmClock = () => {
+const AlarmClock = ({navigation}) => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
@@ -15,6 +16,7 @@ const AlarmClock = () => {
           <Button>Novo alarme</Button>
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };

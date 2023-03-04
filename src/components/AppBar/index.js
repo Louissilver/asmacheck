@@ -3,11 +3,13 @@ import {TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {theme} from '../../styles/globalStyles';
 import styles from './styles';
+import {openDrawer} from '../../utils';
+import {useNavigation} from '@react-navigation/core';
 
 const AppBar = ({navigation}) => {
   return (
     <View style={styles.navigation}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={openDrawer}>
         <Icon name="bars" size={40} color={theme.textContrastMain} />
       </TouchableOpacity>
       <TouchableOpacity

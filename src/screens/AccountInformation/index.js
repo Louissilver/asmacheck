@@ -6,8 +6,9 @@ import {Paragraph} from '../../components/Paragraph';
 import HeaderShape from '../../components/HeaderShape';
 import {theme} from '../../styles/globalStyles';
 import Header from '../../components/Header';
+import {AppBar} from '../../components/AppBar';
 
-const AccountInformation = () => {
+const AccountInformation = ({navigation}) => {
   return (
     <SafeAreaView style={styles.background}>
       <ScrollView style={styles.scroll}>
@@ -24,6 +25,7 @@ const AccountInformation = () => {
           <Button secondary>Cancelar</Button>
         </View>
       </ScrollView>
+      <AppBar navigation={navigation} />
     </SafeAreaView>
   );
 };
